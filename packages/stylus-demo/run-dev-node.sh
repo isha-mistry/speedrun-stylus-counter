@@ -121,7 +121,7 @@ fi
 ############################################
 # Generate the ABI for the deployed contract
 echo "Generating ABI for the deployed contract..."
-cargo stylus export-abi
+cargo run --manifest-path=Cargo.toml --features export-abi
 
 # Verify if ABI generation was successful
 if [[ $? -ne 0 ]]; then
